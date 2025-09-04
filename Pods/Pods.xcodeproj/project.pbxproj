@@ -7,83 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		029C1D6AA73EE83F565277B7A37485F4 /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269D9E3ED9A152A138F8D25D9B55C4 /* GCDWebServerErrorResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0F1992561B1E92D4BDE71B81C2D6503A /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE33E63FAC2AF6DECB34A9E4C2CF396 /* Pods-Tests-dummy.m */; };
-		0F3DA3BA9850BF4BF894FEEDFF0C9229 /* GCDWebServerFileRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0277AD5E4C5F4162026F51DEFD1BC0C1 /* GCDWebServerFileRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0FABF145E1082CE34AEE60179D5570B7 /* GCDWebServerStreamedResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 95BF4DB8F71DC5126B6C0490C21BCB54 /* GCDWebServerStreamedResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12AC94EEA3EBCD92EC7813622C59C2C5 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A56FDAF186AD05848B1B0B7AE508A20 /* GCDWebServerFileRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1FD23828B55C25E8DB4BBC5CECCC483A /* Pods-hallelujah-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457057E96E53296D85DC061B53DC355 /* Pods-hallelujah-dummy.m */; };
-		2058790E41E692A4D2E767107A0B453C /* NSString+MDCLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9103BE66498477E8B36DBEFC8C29FC /* NSString+MDCLevenshteinDistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22BAB6412F4DD7742B43EF97DD55DB61 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA73A734567373E7B79BAFBD000D6D9E /* GCDWebServerResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		23865265557A519370D211F2ED05190B /* GCDWebServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 220B0F3A6D64FFA6F4FBE8A1FACC7BCF /* GCDWebServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2469E489BCD3F064D88AD23A36D0BCAE /* NSString+MDCDamerauLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3ED5E336096E4A470584016D95D2C8 /* NSString+MDCDamerauLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3238017AE2A154486F1C52A2F75098B0 /* MDCLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = E82C03327CD326932CDF09E2F5B05AD2 /* MDCLevenshteinDistance.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3AB9D7F829E68D9168A2DB6BBED5E193 /* GCDWebServer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71AD2061F7832EC27CB03742DD109BBF /* GCDWebServer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3ABA97C302D2E1DC730751CBE9796CC1 /* Pods-hallelujah-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96DB6634027FF7BD7AD5768157EBCB7D /* Pods-hallelujah-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3EE9595B35B6FF8026C306C5833461A9 /* GCDWebServerHTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 20BA1F0CC07E786771E226C053450607 /* GCDWebServerHTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		431D97C5E79BD3D40E36FE50AB752036 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C7FBE72750BD29980317ABC5FDEFE2 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DD8F66CAE5947B96C433FB8F43BBDE7 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F24DB1CB0605CCF8B854C215A906331A /* GCDWebServerFileResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4F2EC21F1FB62B48A07447FE269AE061 /* NSString+MDCCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = FA526F3A43B63411084A7829F4F7DA8A /* NSString+MDCCompare.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		513047B7DA6C1DDE594C344240354FC2 /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA58E69F33D0E1392F84ED447008D7A3 /* GCDWebServerDataRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		532B6D563A72502F7A092D8EFAD28E81 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72741A8ABEF325A4AD13D4C3012CA10 /* GCDWebServerRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		56139CF308229A325461B2C519EF4C5D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABBDE270C4FEF78B7FF551B4A91483 /* Cocoa.framework */; };
-		58B735558C41D54A4B73814EC1D51E2D /* MDCDamerauLevenshtein-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2626D75598EA80A2E758F8FC62BEA985 /* MDCDamerauLevenshtein-dummy.m */; };
-		6500305844320FB99D294E28D5544327 /* GCDWebServerErrorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6785ACD0D39E2F4F68594E8002E093 /* GCDWebServerErrorResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		672C383FDAEC0101EFFC95BBFAA23F21 /* MDCLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DEFB798136ACF10FB902A11FBCC28 /* MDCLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		69BB67FDE3B6D34B598357983972B892 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47C1F04237AA14C666FC13BB81D2EAD /* SystemConfiguration.framework */; };
-		6A6DEB0A79F0EA003CEDAF49352F580B /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1094D0C39CD7BB049CF7F54235B80DC /* GCDWebServerDataResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6E446D629A22DB763C8B87D81D002A7E /* NSString+MDCCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0CBE1F04383FC007995572213058A0 /* NSString+MDCCompare.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6F8B5E8FBBDD4FF86139E4252E566B0E /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F87760744F26536869E6E21DC3D5E3 /* GCDWebServerMultiPartFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		70FE24F3FF6BC79CE0D5031D94C81B02 /* GCDWebServerResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B4E563433064BC9171F1230F7EFC8B /* GCDWebServerResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71420F2D0A87FA04864EA5D9BDA1C638 /* MDCDamerauLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = CADBB46B1EDFD5DC52ABA276736A5042 /* MDCDamerauLevenshteinDistance.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7BBF7CD170A158ADB7BC4BE728D6E991 /* GCDWebServerFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 482A5AADE8EE16F3D593CC6FA3D862E9 /* GCDWebServerFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80D71A98721958B12DF4DE9E4CE5354A /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6150634DC97CCCA596A41FB75B2A82 /* GCDWebServer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		80DD4A8CB008AE85A6F3660BFF682E85 /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 435627A6F59E96D07EABCD278B3F998F /* GCDWebServerURLEncodedFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8384201F0E79B54E17E525608BA94684 /* MDCDistanceMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C49582CAE8921C5046CB133630AD7 /* MDCDistanceMatrix.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8FC8B3530BADD34FE8EF9A6F8A13AEAC /* NSString+MDCDamerauLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 782C90F6C3FFD43382F840AC8F10C9EA /* NSString+MDCDamerauLevenshteinDistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9761C548E5E773E5676503024CAD41C5 /* GCDWebServerURLEncodedFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7700F9402A403290141EF688D4A39A /* GCDWebServerURLEncodedFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A089E9F224B11791335C4EBDFC523F3 /* GCDWebServerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1654DEF0918C640FEAB41D59A8E17D9F /* GCDWebServerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9DD51D67336AD13F67C6C96E83750F61 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABBDE270C4FEF78B7FF551B4A91483 /* Cocoa.framework */; };
-		A56EA17142E08761D5265CD99611C318 /* GCDWebServerFileResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEDE92E2DDF974B6434DB37C42769CF /* GCDWebServerFileResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA7ECDCE8A01BCC19B43C12CDBE12362 /* MDCDamerauLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EFDB8E425ACC208C4B05BAEAC06C0C /* MDCDamerauLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		ABAE1F4399D196DD7514CE9CA9A0D020 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABBDE270C4FEF78B7FF551B4A91483 /* Cocoa.framework */; };
-		B1605B055C82D80291D7C696494BD6A6 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76BC65F6B346A33740DEF05950C35E /* GCDWebServerFunctions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B5CE22B3B5D8AF9C7537337E4DD662C2 /* MDCDamerauLevenshtein-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A751A2060796E39C7CA504C078EA2A /* MDCDamerauLevenshtein-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9CB1EB3C6C65F32564871B4939FBCCA /* GCDWebServerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5923F1C27066F18308BB4BBC172C1119 /* GCDWebServerRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4D4CAD0DD96AAC8F59C519D184F9E2A /* MDCDamerauLevenshtein.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFEEE15715CCE44BA43BD090DAAA999 /* MDCDamerauLevenshtein.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA665E5BDAB5904C802DC18C3046D514 /* GCDWebServerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 331F5CD9C70B6E8C3BB0C45D28479AE8 /* GCDWebServerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CECC07060F4E45F30BB686631B8C5FA7 /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B571DEFC9B023C6F16E8B4700A2BD /* GCDWebServerConnection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D07A6461A975C435024586B48DA524FF /* GCDWebServerDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 78846E883F12FB836A0F6A268489DFEB /* GCDWebServerDataResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0A339D63E42D1B9F836EF0FB87241BB /* GCDWebServerDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FC497C74DDD6F2A20866B534782F545B /* GCDWebServerDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2C61937ABA261A901CC4F433EB5218D /* GCDWebServer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB70D39D4D41552C94008676A9F7F9 /* GCDWebServer-dummy.m */; };
-		E4386BBB623DF5CD33A3CDCDCE3DB611 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABBDE270C4FEF78B7FF551B4A91483 /* Cocoa.framework */; };
-		E657A3DECCFE020642CDA909A79CE7C4 /* MDCDistanceMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D4D87CBD65CFB731927895F4234FD4 /* MDCDistanceMatrix.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EE31BEEDED559E7169C56621151F6899 /* NSString+MDCLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 496C430160C9E17723AC9FECDC6303EF /* NSString+MDCLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FA4DDBBC3C154F5F66D9FC100564B3B2 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA366BFE86C9BE1E540119657F991CC /* GCDWebServerStreamedResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FD5BF0783A18B5C2E0EC90C0CF47B993 /* GCDWebServerMultiPartFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCD213DFF5874CE3B9FB88CB3ACC5AB /* GCDWebServerMultiPartFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01703FAF0FA0AD4448C87CF83BF65052 /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F87760744F26536869E6E21DC3D5E3 /* GCDWebServerMultiPartFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0779705C8967F01BB0558C4AA85180AE /* GCDWebServerURLEncodedFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7700F9402A403290141EF688D4A39A /* GCDWebServerURLEncodedFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AE9E0DC52A7C82B00E90EB2DCEFA2F6 /* NSString+MDCLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9103BE66498477E8B36DBEFC8C29FC /* NSString+MDCLevenshteinDistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DA83B4B46FD7102E4DAB60B4788CF21 /* GCDWebServerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5923F1C27066F18308BB4BBC172C1119 /* GCDWebServerRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		299B65777E1359FBA38DA305F5348768 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F24DB1CB0605CCF8B854C215A906331A /* GCDWebServerFileResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		34AEB727B82B65FBDF12843D6EF27F32 /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 435627A6F59E96D07EABCD278B3F998F /* GCDWebServerURLEncodedFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3C89A807047EFA678BBD61B156BCDAA7 /* GCDWebServerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1654DEF0918C640FEAB41D59A8E17D9F /* GCDWebServerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3FB1139972C2654809030FED6AB045BC /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA366BFE86C9BE1E540119657F991CC /* GCDWebServerStreamedResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		42472B58B9949DBDD04A64DFBE718428 /* NSString+MDCCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0CBE1F04383FC007995572213058A0 /* NSString+MDCCompare.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		512BD9E55147D8692C19F0F7532B3C74 /* GCDWebServerStreamedResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 95BF4DB8F71DC5126B6C0490C21BCB54 /* GCDWebServerStreamedResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55F90694B818619495FEB0A1DF153C14 /* Pods-hallelujah-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457057E96E53296D85DC061B53DC355 /* Pods-hallelujah-dummy.m */; };
+		57CD8B411F9E7FD0D707C5000F561D79 /* GCDWebServerFileRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0277AD5E4C5F4162026F51DEFD1BC0C1 /* GCDWebServerFileRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C9DE03DFBCC84D4AF10FEC063BE7984 /* GCDWebServerResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B4E563433064BC9171F1230F7EFC8B /* GCDWebServerResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CC41BAE3800CF1B927DA88AE0127647 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72741A8ABEF325A4AD13D4C3012CA10 /* GCDWebServerRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		62AF3E1EA9E4C4958DD9215EF7D02F42 /* GCDWebServerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 331F5CD9C70B6E8C3BB0C45D28479AE8 /* GCDWebServerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68DBDB505F9C09FB48652AD5D56E607D /* Pods-hallelujah-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96DB6634027FF7BD7AD5768157EBCB7D /* Pods-hallelujah-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AC6E37E2BC2DB241A490D2B55828E74 /* MDCDamerauLevenshtein.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFEEE15715CCE44BA43BD090DAAA999 /* MDCDamerauLevenshtein.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C94FBA6250F34A90A14835701252DA3 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA73A734567373E7B79BAFBD000D6D9E /* GCDWebServerResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		70645F5C409E55BE68EFB5DDC1A79FD7 /* MDCDistanceMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D4D87CBD65CFB731927895F4234FD4 /* MDCDistanceMatrix.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		71A14B9EFB80A6978240B43D365EC21E /* NSString+MDCCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = FA526F3A43B63411084A7829F4F7DA8A /* NSString+MDCCompare.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		767500ACEF0B07B105F0FE1C921FAF5E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4287A37B023351F611FD72E4DE4E71FF /* SystemConfiguration.framework */; };
+		7CF5B2B1904569C192A5FDF779ECA39F /* GCDWebServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 220B0F3A6D64FFA6F4FBE8A1FACC7BCF /* GCDWebServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DE1EF8E9248AAFE2DC5BBFFA75ADC7C /* MDCDamerauLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EFDB8E425ACC208C4B05BAEAC06C0C /* MDCDamerauLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7EC6CD048B43A2285A6C1DFB6C634ADF /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1094D0C39CD7BB049CF7F54235B80DC /* GCDWebServerDataResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		84003797893EFA995C60954863772BAA /* NSString+MDCDamerauLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 782C90F6C3FFD43382F840AC8F10C9EA /* NSString+MDCDamerauLevenshteinDistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C8B619117B434A86E072F940B34FBB7 /* GCDWebServerErrorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6785ACD0D39E2F4F68594E8002E093 /* GCDWebServerErrorResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC73399BA27099A35ECBC117052E805D /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA58E69F33D0E1392F84ED447008D7A3 /* GCDWebServerDataRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AE850D809E19D2CA0968C03DC7A19FA2 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C7FBE72750BD29980317ABC5FDEFE2 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0B3FDF1673A11EB56BC7778C4C3B2FC /* NSString+MDCLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 496C430160C9E17723AC9FECDC6303EF /* NSString+MDCLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B89D18C92CBCBC0749D3544853A51E0B /* MDCDamerauLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = CADBB46B1EDFD5DC52ABA276736A5042 /* MDCDamerauLevenshteinDistance.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA3AE7B84B2C0D244748CDD9D0B503A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B74769F0EDA208C41FC6AB9124EF18 /* Cocoa.framework */; };
+		BBA95C74CC0CBAA6800E459AD605E8BE /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A56FDAF186AD05848B1B0B7AE508A20 /* GCDWebServerFileRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BBDD459D49703F9C77A1DADB21EB81F9 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76BC65F6B346A33740DEF05950C35E /* GCDWebServerFunctions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BBE3C26A9194CA007404ECB4DACD8C90 /* GCDWebServerFileResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEDE92E2DDF974B6434DB37C42769CF /* GCDWebServerFileResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD974B1F96731E0F2B2C9822FF7159C8 /* MDCDamerauLevenshtein-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2626D75598EA80A2E758F8FC62BEA985 /* MDCDamerauLevenshtein-dummy.m */; };
+		BE4C77A299D1EFDF6C6143B9E4B2691B /* MDCLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DEFB798136ACF10FB902A11FBCC28 /* MDCLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BE60058830008256D61ED509FA39BECE /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B571DEFC9B023C6F16E8B4700A2BD /* GCDWebServerConnection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C0E34F789217BBCE2A1ECEB01EF1D058 /* GCDWebServerDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 78846E883F12FB836A0F6A268489DFEB /* GCDWebServerDataResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5262EC713D4EC1E033A3FEF37979B08 /* GCDWebServer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB70D39D4D41552C94008676A9F7F9 /* GCDWebServer-dummy.m */; };
+		D673F9D6210D748CEFFA392F9140EB06 /* NSString+MDCDamerauLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3ED5E336096E4A470584016D95D2C8 /* NSString+MDCDamerauLevenshteinDistance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D846AC1F1C69EE6E60F2FD9713AB4268 /* GCDWebServerHTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 20BA1F0CC07E786771E226C053450607 /* GCDWebServerHTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB9FED18D21395201EAE3BB66BEE4EAA /* MDCLevenshteinDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = E82C03327CD326932CDF09E2F5B05AD2 /* MDCLevenshteinDistance.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E3F36C3C60BFE15A30447D0160355C26 /* GCDWebServerMultiPartFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCD213DFF5874CE3B9FB88CB3ACC5AB /* GCDWebServerMultiPartFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E49BB99B7394AFF01A53D692A9D0EA7F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B74769F0EDA208C41FC6AB9124EF18 /* Cocoa.framework */; };
+		E947F44C2A6D1CDE99BB6C09FD52B63A /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE33E63FAC2AF6DECB34A9E4C2CF396 /* Pods-Tests-dummy.m */; };
+		E999B12FA527D0F068B4BC07A3802AA9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B74769F0EDA208C41FC6AB9124EF18 /* Cocoa.framework */; };
+		EB0D0C65AB2483DD9E68274AEF07EBF7 /* GCDWebServer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71AD2061F7832EC27CB03742DD109BBF /* GCDWebServer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF07D766D8E3D79627797731968E9B00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B74769F0EDA208C41FC6AB9124EF18 /* Cocoa.framework */; };
+		F0C61C2DB35ACA85C9237318CF01E946 /* GCDWebServerDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FC497C74DDD6F2A20866B534782F545B /* GCDWebServerDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F282FB984BB080BAA69BCEDCDE08C894 /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269D9E3ED9A152A138F8D25D9B55C4 /* GCDWebServerErrorResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F4C883376AAA0CBFAFFB50DB49A42515 /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6150634DC97CCCA596A41FB75B2A82 /* GCDWebServer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FA3AD35166B18FF3CA541FD4512DA019 /* MDCDistanceMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C49582CAE8921C5046CB133630AD7 /* MDCDistanceMatrix.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FF86FC0FB2FF7F88DD2E54960264C854 /* GCDWebServerFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 482A5AADE8EE16F3D593CC6FA3D862E9 /* GCDWebServerFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF9F93754C3FC08E4558B6282566DE26 /* MDCDamerauLevenshtein-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A751A2060796E39C7CA504C078EA2A /* MDCDamerauLevenshtein-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		046AA677BE516E01AAF994E10CA6B250 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54F0C929F061DA7402947A8C1E3BA066;
-			remoteInfo = MDCDamerauLevenshtein;
-		};
-		2F9F526C8E2FEC7ECC3A9518534ACCC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54F0C929F061DA7402947A8C1E3BA066;
-			remoteInfo = MDCDamerauLevenshtein;
-		};
-		95E7C1E00423CB58DB8BC8E992356D72 /* PBXContainerItemProxy */ = {
+		1061DE4FADDFD2CFE4442938D507E721 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AD904F32069787EFB2DFFE05EB82F5BD;
 			remoteInfo = GCDWebServer;
+		};
+		2EE5C639B4D0952C03AAFAC1BE1909B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54F0C929F061DA7402947A8C1E3BA066;
+			remoteInfo = MDCDamerauLevenshtein;
+		};
+		883B0E3FAC7701550F1D4E64AC5CD0FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54F0C929F061DA7402947A8C1E3BA066;
+			remoteInfo = MDCDamerauLevenshtein;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -104,6 +104,7 @@
 		2CEDE92E2DDF974B6434DB37C42769CF /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileResponse.h; path = GCDWebServer/Responses/GCDWebServerFileResponse.h; sourceTree = "<group>"; };
 		2DCD213DFF5874CE3B9FB88CB3ACC5AB /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerMultiPartFormRequest.h; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.h; sourceTree = "<group>"; };
 		331F5CD9C70B6E8C3BB0C45D28479AE8 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = GCDWebServer/Core/GCDWebServerConnection.h; sourceTree = "<group>"; };
+		4287A37B023351F611FD72E4DE4E71FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		435627A6F59E96D07EABCD278B3F998F /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerURLEncodedFormRequest.m; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.m; sourceTree = "<group>"; };
 		482A5AADE8EE16F3D593CC6FA3D862E9 /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = GCDWebServer/Core/GCDWebServerFunctions.h; sourceTree = "<group>"; };
 		496C430160C9E17723AC9FECDC6303EF /* NSString+MDCLevenshteinDistance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MDCLevenshteinDistance.m"; path = "MDCDamerauLevenshtein/Categories/NSString+MDCLevenshteinDistance.m"; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		5B3DEFB798136ACF10FB902A11FBCC28 /* MDCLevenshteinDistance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCLevenshteinDistance.m; path = MDCDamerauLevenshtein/Algorithms/MDCLevenshteinDistance.m; sourceTree = "<group>"; };
 		5BF1D43CB74F4C7B304842295ED87125 /* GCDWebServer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GCDWebServer.modulemap; sourceTree = "<group>"; };
 		5C76BC65F6B346A33740DEF05950C35E /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFunctions.m; path = GCDWebServer/Core/GCDWebServerFunctions.m; sourceTree = "<group>"; };
-		5DABBDE270C4FEF78B7FF551B4A91483 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		5DE33E63FAC2AF6DECB34A9E4C2CF396 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
 		68F6AF7FD804A09685DCC90B74E9B53B /* GCDWebServer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCDWebServer-prefix.pch"; sourceTree = "<group>"; };
 		693AFC893DDA3FFB2D4F06F57E30456C /* MDCDamerauLevenshtein-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MDCDamerauLevenshtein-prefix.pch"; sourceTree = "<group>"; };
@@ -131,6 +131,7 @@
 		81C7FBE72750BD29980317ABC5FDEFE2 /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
 		83E1B0FB8A4E75B0C4248863747294E6 /* Pods-hallelujah-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hallelujah-acknowledgements.plist"; sourceTree = "<group>"; };
 		8C3ED5E336096E4A470584016D95D2C8 /* NSString+MDCDamerauLevenshteinDistance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MDCDamerauLevenshteinDistance.m"; path = "MDCDamerauLevenshtein/Categories/NSString+MDCDamerauLevenshteinDistance.m"; sourceTree = "<group>"; };
+		91B74769F0EDA208C41FC6AB9124EF18 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		95BF4DB8F71DC5126B6C0490C21BCB54 /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerStreamedResponse.h; path = GCDWebServer/Responses/GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
 		96DB6634027FF7BD7AD5768157EBCB7D /* Pods-hallelujah-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hallelujah-umbrella.h"; sourceTree = "<group>"; };
 		983B80BFFFCBB5E685DA4DF709723019 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -160,7 +161,6 @@
 		EC890B48BF55D7914326C04EE0AA871D /* MDCDamerauLevenshtein */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MDCDamerauLevenshtein; path = MDCDamerauLevenshtein.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24DB1CB0605CCF8B854C215A906331A /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileResponse.m; path = GCDWebServer/Responses/GCDWebServerFileResponse.m; sourceTree = "<group>"; };
 		F3E19B0F4CE194E6B729CB32CE70CDD7 /* Pods-hallelujah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hallelujah.release.xcconfig"; sourceTree = "<group>"; };
-		F47C1F04237AA14C666FC13BB81D2EAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		F5269D9E3ED9A152A138F8D25D9B55C4 /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerErrorResponse.m; path = GCDWebServer/Responses/GCDWebServerErrorResponse.m; sourceTree = "<group>"; };
 		F65B5FB6A972A644ACE445C4FAD188D1 /* MDCDamerauLevenshtein.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MDCDamerauLevenshtein.modulemap; sourceTree = "<group>"; };
 		FA526F3A43B63411084A7829F4F7DA8A /* NSString+MDCCompare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MDCCompare.h"; path = "MDCDamerauLevenshtein/Algorithms/Data Structures/NSString+MDCCompare.h"; sourceTree = "<group>"; };
@@ -171,51 +171,42 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		69CCEE7A9B6961EDC5D5E29E911C3D00 /* Frameworks */ = {
+		245828DE1B86EBCDC451E790FD8C6B97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56139CF308229A325461B2C519EF4C5D /* Cocoa.framework in Frameworks */,
+				E999B12FA527D0F068B4BC07A3802AA9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F0ECCB8046E16304256DF427CAB2808 /* Frameworks */ = {
+		6793433B53BA951CC5E78722A389BDF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAE1F4399D196DD7514CE9CA9A0D020 /* Cocoa.framework in Frameworks */,
+				BA3AE7B84B2C0D244748CDD9D0B503A5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A96835D81104117F7C487885832DF7F8 /* Frameworks */ = {
+		B4DA54F9FEF198747B6FC16657E333D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD51D67336AD13F67C6C96E83750F61 /* Cocoa.framework in Frameworks */,
-				69BB67FDE3B6D34B598357983972B892 /* SystemConfiguration.framework in Frameworks */,
+				E49BB99B7394AFF01A53D692A9D0EA7F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B737A01A6B352FCEEB59833560097516 /* Frameworks */ = {
+		ECA8FBB269A4B00CE1B8826F697EF17E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4386BBB623DF5CD33A3CDCDCE3DB611 /* Cocoa.framework in Frameworks */,
+				EF07D766D8E3D79627797731968E9B00 /* Cocoa.framework in Frameworks */,
+				767500ACEF0B07B105F0FE1C921FAF5E /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03590CF8BB5FFD4DF33E7230DC75A39C /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				5DABBDE270C4FEF78B7FF551B4A91483 /* Cocoa.framework */,
-				F47C1F04237AA14C666FC13BB81D2EAD /* SystemConfiguration.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
 		0A351AB85D789E9FFDBAA4090994FDDA /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +295,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AD596CDB55B570BBE0532B4D4E48B1CB /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				91B74769F0EDA208C41FC6AB9124EF18 /* Cocoa.framework */,
+				4287A37B023351F611FD72E4DE4E71FF /* SystemConfiguration.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
 		B44DDDE8B598CF22D2678501B9CC1B81 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,7 +331,7 @@
 		C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03590CF8BB5FFD4DF33E7230DC75A39C /* OS X */,
+				AD596CDB55B570BBE0532B4D4E48B1CB /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -398,57 +398,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		10C7A8D4EDDCB81A2CFDD8E2B72F1863 /* Headers */ = {
+		133487BA0782E499FB5F0CF3C6E0F304 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23865265557A519370D211F2ED05190B /* GCDWebServer.h in Headers */,
-				3AB9D7F829E68D9168A2DB6BBED5E193 /* GCDWebServer-umbrella.h in Headers */,
-				CA665E5BDAB5904C802DC18C3046D514 /* GCDWebServerConnection.h in Headers */,
-				D0A339D63E42D1B9F836EF0FB87241BB /* GCDWebServerDataRequest.h in Headers */,
-				D07A6461A975C435024586B48DA524FF /* GCDWebServerDataResponse.h in Headers */,
-				6500305844320FB99D294E28D5544327 /* GCDWebServerErrorResponse.h in Headers */,
-				0F3DA3BA9850BF4BF894FEEDFF0C9229 /* GCDWebServerFileRequest.h in Headers */,
-				A56EA17142E08761D5265CD99611C318 /* GCDWebServerFileResponse.h in Headers */,
-				7BBF7CD170A158ADB7BC4BE728D6E991 /* GCDWebServerFunctions.h in Headers */,
-				3EE9595B35B6FF8026C306C5833461A9 /* GCDWebServerHTTPStatusCodes.h in Headers */,
-				FD5BF0783A18B5C2E0EC90C0CF47B993 /* GCDWebServerMultiPartFormRequest.h in Headers */,
-				9A089E9F224B11791335C4EBDFC523F3 /* GCDWebServerPrivate.h in Headers */,
-				B9CB1EB3C6C65F32564871B4939FBCCA /* GCDWebServerRequest.h in Headers */,
-				70FE24F3FF6BC79CE0D5031D94C81B02 /* GCDWebServerResponse.h in Headers */,
-				0FABF145E1082CE34AEE60179D5570B7 /* GCDWebServerStreamedResponse.h in Headers */,
-				9761C548E5E773E5676503024CAD41C5 /* GCDWebServerURLEncodedFormRequest.h in Headers */,
+				7CF5B2B1904569C192A5FDF779ECA39F /* GCDWebServer.h in Headers */,
+				EB0D0C65AB2483DD9E68274AEF07EBF7 /* GCDWebServer-umbrella.h in Headers */,
+				62AF3E1EA9E4C4958DD9215EF7D02F42 /* GCDWebServerConnection.h in Headers */,
+				F0C61C2DB35ACA85C9237318CF01E946 /* GCDWebServerDataRequest.h in Headers */,
+				C0E34F789217BBCE2A1ECEB01EF1D058 /* GCDWebServerDataResponse.h in Headers */,
+				8C8B619117B434A86E072F940B34FBB7 /* GCDWebServerErrorResponse.h in Headers */,
+				57CD8B411F9E7FD0D707C5000F561D79 /* GCDWebServerFileRequest.h in Headers */,
+				BBE3C26A9194CA007404ECB4DACD8C90 /* GCDWebServerFileResponse.h in Headers */,
+				FF86FC0FB2FF7F88DD2E54960264C854 /* GCDWebServerFunctions.h in Headers */,
+				D846AC1F1C69EE6E60F2FD9713AB4268 /* GCDWebServerHTTPStatusCodes.h in Headers */,
+				E3F36C3C60BFE15A30447D0160355C26 /* GCDWebServerMultiPartFormRequest.h in Headers */,
+				3C89A807047EFA678BBD61B156BCDAA7 /* GCDWebServerPrivate.h in Headers */,
+				0DA83B4B46FD7102E4DAB60B4788CF21 /* GCDWebServerRequest.h in Headers */,
+				5C9DE03DFBCC84D4AF10FEC063BE7984 /* GCDWebServerResponse.h in Headers */,
+				512BD9E55147D8692C19F0F7532B3C74 /* GCDWebServerStreamedResponse.h in Headers */,
+				0779705C8967F01BB0558C4AA85180AE /* GCDWebServerURLEncodedFormRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E13B0CCA06EE6DBE0005B0243C0862D /* Headers */ = {
+		AC287F37B116A954556C48ED6A5F0F10 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431D97C5E79BD3D40E36FE50AB752036 /* Pods-Tests-umbrella.h in Headers */,
+				68DBDB505F9C09FB48652AD5D56E607D /* Pods-hallelujah-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86BEAD4E9681352C4181852BFB4B42BC /* Headers */ = {
+		F787457E993672EDC9662FB03F9F665E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ABA97C302D2E1DC730751CBE9796CC1 /* Pods-hallelujah-umbrella.h in Headers */,
+				6AC6E37E2BC2DB241A490D2B55828E74 /* MDCDamerauLevenshtein.h in Headers */,
+				FF9F93754C3FC08E4558B6282566DE26 /* MDCDamerauLevenshtein-umbrella.h in Headers */,
+				B89D18C92CBCBC0749D3544853A51E0B /* MDCDamerauLevenshteinDistance.h in Headers */,
+				70645F5C409E55BE68EFB5DDC1A79FD7 /* MDCDistanceMatrix.h in Headers */,
+				DB9FED18D21395201EAE3BB66BEE4EAA /* MDCLevenshteinDistance.h in Headers */,
+				71A14B9EFB80A6978240B43D365EC21E /* NSString+MDCCompare.h in Headers */,
+				84003797893EFA995C60954863772BAA /* NSString+MDCDamerauLevenshteinDistance.h in Headers */,
+				0AE9E0DC52A7C82B00E90EB2DCEFA2F6 /* NSString+MDCLevenshteinDistance.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8A49CE563975FDA1B8AEFABE369003B /* Headers */ = {
+		FE0198EE25BB42F6C3DE1647160D4C53 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D4CAD0DD96AAC8F59C519D184F9E2A /* MDCDamerauLevenshtein.h in Headers */,
-				B5CE22B3B5D8AF9C7537337E4DD662C2 /* MDCDamerauLevenshtein-umbrella.h in Headers */,
-				71420F2D0A87FA04864EA5D9BDA1C638 /* MDCDamerauLevenshteinDistance.h in Headers */,
-				E657A3DECCFE020642CDA909A79CE7C4 /* MDCDistanceMatrix.h in Headers */,
-				3238017AE2A154486F1C52A2F75098B0 /* MDCLevenshteinDistance.h in Headers */,
-				4F2EC21F1FB62B48A07447FE269AE061 /* NSString+MDCCompare.h in Headers */,
-				8FC8B3530BADD34FE8EF9A6F8A13AEAC /* NSString+MDCDamerauLevenshteinDistance.h in Headers */,
-				2058790E41E692A4D2E767107A0B453C /* NSString+MDCLevenshteinDistance.h in Headers */,
+				AE850D809E19D2CA0968C03DC7A19FA2 /* Pods-Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,18 +457,18 @@
 /* Begin PBXNativeTarget section */
 		49347168B5DCF7A966B2EFDBEC509FB1 /* Pods-hallelujah */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68CC59684CFE3CCDEE7BAE8BEF96F1B6 /* Build configuration list for PBXNativeTarget "Pods-hallelujah" */;
+			buildConfigurationList = EEF1CF345260BFC1232FC7044701670F /* Build configuration list for PBXNativeTarget "Pods-hallelujah" */;
 			buildPhases = (
-				86BEAD4E9681352C4181852BFB4B42BC /* Headers */,
-				25EBC755DEAE5E27E35FEEBE1E9A8D59 /* Sources */,
-				69CCEE7A9B6961EDC5D5E29E911C3D00 /* Frameworks */,
-				0E33D991C57077EB005C6AEC57A20197 /* Resources */,
+				AC287F37B116A954556C48ED6A5F0F10 /* Headers */,
+				6468884729888CC477B5D973A5224EF2 /* Sources */,
+				245828DE1B86EBCDC451E790FD8C6B97 /* Frameworks */,
+				0659F1075C35DCA97B9921FE78BAA947 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1915774B9C73B69C2ECEC3890E897131 /* PBXTargetDependency */,
-				014C3EAEAD3D2877E1FB2867CD5C9EE3 /* PBXTargetDependency */,
+				76A4D390DB8C41648B2B8348C3423541 /* PBXTargetDependency */,
+				CB325CB199D2482849F7D7514545D279 /* PBXTargetDependency */,
 			);
 			name = "Pods-hallelujah";
 			productName = Pods_hallelujah;
@@ -477,12 +477,12 @@
 		};
 		54F0C929F061DA7402947A8C1E3BA066 /* MDCDamerauLevenshtein */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B58636A2D5ECDFC72A5005B3B4B02DE /* Build configuration list for PBXNativeTarget "MDCDamerauLevenshtein" */;
+			buildConfigurationList = 2CFCF9179CFACCF4A37B50E14EFFA6C3 /* Build configuration list for PBXNativeTarget "MDCDamerauLevenshtein" */;
 			buildPhases = (
-				C8A49CE563975FDA1B8AEFABE369003B /* Headers */,
-				CE633DF0896A846CC5EF596D68469F7C /* Sources */,
-				7F0ECCB8046E16304256DF427CAB2808 /* Frameworks */,
-				7427A1BC19291CCBC53109558D046D3C /* Resources */,
+				F787457E993672EDC9662FB03F9F665E /* Headers */,
+				2D615C1BDA179859D3AA6882502ED7DB /* Sources */,
+				B4DA54F9FEF198747B6FC16657E333D3 /* Frameworks */,
+				FDC0F8A53477F2F63C4AEE10CB3112E9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -495,17 +495,17 @@
 		};
 		958186CF7D75761173A23E66E0CCAF14 /* Pods-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31D91BDE1B57E5B8D0EE1F17C729D329 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildConfigurationList = E47E322019FB5E35D023B26084F690D1 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
 			buildPhases = (
-				1E13B0CCA06EE6DBE0005B0243C0862D /* Headers */,
-				646E977318FBA278A2686303141A7976 /* Sources */,
-				B737A01A6B352FCEEB59833560097516 /* Frameworks */,
-				D363FBC3A6F3BCBDB0E2D2F6CA641880 /* Resources */,
+				FE0198EE25BB42F6C3DE1647160D4C53 /* Headers */,
+				A3031322274BFF95C3D5D912BFB340D1 /* Sources */,
+				6793433B53BA951CC5E78722A389BDF1 /* Frameworks */,
+				1696AD33B75D0404CE656FC7BF68CB99 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D6767099C5FACC5824DEC8BDE6A9C5F4 /* PBXTargetDependency */,
+				3B2BD4E690797F95CF16223D54A01AF6 /* PBXTargetDependency */,
 			);
 			name = "Pods-Tests";
 			productName = Pods_Tests;
@@ -514,12 +514,12 @@
 		};
 		AD904F32069787EFB2DFFE05EB82F5BD /* GCDWebServer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CF590D5824784D82CD99F90E5D66959 /* Build configuration list for PBXNativeTarget "GCDWebServer" */;
+			buildConfigurationList = 77FB5845F3C869A8A24F694EFDB5251C /* Build configuration list for PBXNativeTarget "GCDWebServer" */;
 			buildPhases = (
-				10C7A8D4EDDCB81A2CFDD8E2B72F1863 /* Headers */,
-				3391BC148813ED56E1FD8A84CD8052AB /* Sources */,
-				A96835D81104117F7C487885832DF7F8 /* Frameworks */,
-				370419A8066B7FBBCF798F0744DFACCB /* Resources */,
+				133487BA0782E499FB5F0CF3C6E0F304 /* Headers */,
+				CECCF4C4CC31841C94AFEB6670C0A11C /* Sources */,
+				ECA8FBB269A4B00CE1B8826F697EF17E /* Frameworks */,
+				457ECCCB41E5DD0D0D570D65FB582D0A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -536,8 +536,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -548,6 +548,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 7F9A4914B43D43BAE6B5B82A19945567 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -561,28 +563,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0E33D991C57077EB005C6AEC57A20197 /* Resources */ = {
+		0659F1075C35DCA97B9921FE78BAA947 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		370419A8066B7FBBCF798F0744DFACCB /* Resources */ = {
+		1696AD33B75D0404CE656FC7BF68CB99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7427A1BC19291CCBC53109558D046D3C /* Resources */ = {
+		457ECCCB41E5DD0D0D570D65FB582D0A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D363FBC3A6F3BCBDB0E2D2F6CA641880 /* Resources */ = {
+		FDC0F8A53477F2F63C4AEE10CB3112E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -592,82 +594,117 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25EBC755DEAE5E27E35FEEBE1E9A8D59 /* Sources */ = {
+		2D615C1BDA179859D3AA6882502ED7DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FD23828B55C25E8DB4BBC5CECCC483A /* Pods-hallelujah-dummy.m in Sources */,
+				BD974B1F96731E0F2B2C9822FF7159C8 /* MDCDamerauLevenshtein-dummy.m in Sources */,
+				7DE1EF8E9248AAFE2DC5BBFFA75ADC7C /* MDCDamerauLevenshteinDistance.m in Sources */,
+				FA3AD35166B18FF3CA541FD4512DA019 /* MDCDistanceMatrix.m in Sources */,
+				BE4C77A299D1EFDF6C6143B9E4B2691B /* MDCLevenshteinDistance.m in Sources */,
+				42472B58B9949DBDD04A64DFBE718428 /* NSString+MDCCompare.m in Sources */,
+				D673F9D6210D748CEFFA392F9140EB06 /* NSString+MDCDamerauLevenshteinDistance.m in Sources */,
+				B0B3FDF1673A11EB56BC7778C4C3B2FC /* NSString+MDCLevenshteinDistance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3391BC148813ED56E1FD8A84CD8052AB /* Sources */ = {
+		6468884729888CC477B5D973A5224EF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80D71A98721958B12DF4DE9E4CE5354A /* GCDWebServer.m in Sources */,
-				E2C61937ABA261A901CC4F433EB5218D /* GCDWebServer-dummy.m in Sources */,
-				CECC07060F4E45F30BB686631B8C5FA7 /* GCDWebServerConnection.m in Sources */,
-				513047B7DA6C1DDE594C344240354FC2 /* GCDWebServerDataRequest.m in Sources */,
-				6A6DEB0A79F0EA003CEDAF49352F580B /* GCDWebServerDataResponse.m in Sources */,
-				029C1D6AA73EE83F565277B7A37485F4 /* GCDWebServerErrorResponse.m in Sources */,
-				12AC94EEA3EBCD92EC7813622C59C2C5 /* GCDWebServerFileRequest.m in Sources */,
-				4DD8F66CAE5947B96C433FB8F43BBDE7 /* GCDWebServerFileResponse.m in Sources */,
-				B1605B055C82D80291D7C696494BD6A6 /* GCDWebServerFunctions.m in Sources */,
-				6F8B5E8FBBDD4FF86139E4252E566B0E /* GCDWebServerMultiPartFormRequest.m in Sources */,
-				532B6D563A72502F7A092D8EFAD28E81 /* GCDWebServerRequest.m in Sources */,
-				22BAB6412F4DD7742B43EF97DD55DB61 /* GCDWebServerResponse.m in Sources */,
-				FA4DDBBC3C154F5F66D9FC100564B3B2 /* GCDWebServerStreamedResponse.m in Sources */,
-				80DD4A8CB008AE85A6F3660BFF682E85 /* GCDWebServerURLEncodedFormRequest.m in Sources */,
+				55F90694B818619495FEB0A1DF153C14 /* Pods-hallelujah-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		646E977318FBA278A2686303141A7976 /* Sources */ = {
+		A3031322274BFF95C3D5D912BFB340D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F1992561B1E92D4BDE71B81C2D6503A /* Pods-Tests-dummy.m in Sources */,
+				E947F44C2A6D1CDE99BB6C09FD52B63A /* Pods-Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE633DF0896A846CC5EF596D68469F7C /* Sources */ = {
+		CECCF4C4CC31841C94AFEB6670C0A11C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B735558C41D54A4B73814EC1D51E2D /* MDCDamerauLevenshtein-dummy.m in Sources */,
-				AA7ECDCE8A01BCC19B43C12CDBE12362 /* MDCDamerauLevenshteinDistance.m in Sources */,
-				8384201F0E79B54E17E525608BA94684 /* MDCDistanceMatrix.m in Sources */,
-				672C383FDAEC0101EFFC95BBFAA23F21 /* MDCLevenshteinDistance.m in Sources */,
-				6E446D629A22DB763C8B87D81D002A7E /* NSString+MDCCompare.m in Sources */,
-				2469E489BCD3F064D88AD23A36D0BCAE /* NSString+MDCDamerauLevenshteinDistance.m in Sources */,
-				EE31BEEDED559E7169C56621151F6899 /* NSString+MDCLevenshteinDistance.m in Sources */,
+				F4C883376AAA0CBFAFFB50DB49A42515 /* GCDWebServer.m in Sources */,
+				C5262EC713D4EC1E033A3FEF37979B08 /* GCDWebServer-dummy.m in Sources */,
+				BE60058830008256D61ED509FA39BECE /* GCDWebServerConnection.m in Sources */,
+				AC73399BA27099A35ECBC117052E805D /* GCDWebServerDataRequest.m in Sources */,
+				7EC6CD048B43A2285A6C1DFB6C634ADF /* GCDWebServerDataResponse.m in Sources */,
+				F282FB984BB080BAA69BCEDCDE08C894 /* GCDWebServerErrorResponse.m in Sources */,
+				BBA95C74CC0CBAA6800E459AD605E8BE /* GCDWebServerFileRequest.m in Sources */,
+				299B65777E1359FBA38DA305F5348768 /* GCDWebServerFileResponse.m in Sources */,
+				BBDD459D49703F9C77A1DADB21EB81F9 /* GCDWebServerFunctions.m in Sources */,
+				01703FAF0FA0AD4448C87CF83BF65052 /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				5CC41BAE3800CF1B927DA88AE0127647 /* GCDWebServerRequest.m in Sources */,
+				6C94FBA6250F34A90A14835701252DA3 /* GCDWebServerResponse.m in Sources */,
+				3FB1139972C2654809030FED6AB045BC /* GCDWebServerStreamedResponse.m in Sources */,
+				34AEB727B82B65FBDF12843D6EF27F32 /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		014C3EAEAD3D2877E1FB2867CD5C9EE3 /* PBXTargetDependency */ = {
+		3B2BD4E690797F95CF16223D54A01AF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MDCDamerauLevenshtein;
 			target = 54F0C929F061DA7402947A8C1E3BA066 /* MDCDamerauLevenshtein */;
-			targetProxy = 2F9F526C8E2FEC7ECC3A9518534ACCC0 /* PBXContainerItemProxy */;
+			targetProxy = 2EE5C639B4D0952C03AAFAC1BE1909B3 /* PBXContainerItemProxy */;
 		};
-		1915774B9C73B69C2ECEC3890E897131 /* PBXTargetDependency */ = {
+		76A4D390DB8C41648B2B8348C3423541 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GCDWebServer;
 			target = AD904F32069787EFB2DFFE05EB82F5BD /* GCDWebServer */;
-			targetProxy = 95E7C1E00423CB58DB8BC8E992356D72 /* PBXContainerItemProxy */;
+			targetProxy = 1061DE4FADDFD2CFE4442938D507E721 /* PBXContainerItemProxy */;
 		};
-		D6767099C5FACC5824DEC8BDE6A9C5F4 /* PBXTargetDependency */ = {
+		CB325CB199D2482849F7D7514545D279 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MDCDamerauLevenshtein;
 			target = 54F0C929F061DA7402947A8C1E3BA066 /* MDCDamerauLevenshtein */;
-			targetProxy = 046AA677BE516E01AAF994E10CA6B250 /* PBXContainerItemProxy */;
+			targetProxy = 883B0E3FAC7701550F1D4E64AC5CD0FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		42BD14212402ED4EB42CF906564B0FA9 /* Release */ = {
+		02927638ECADBB5FA460E7B23633621C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0C4081CDAEE8E6934390ABC4C1C3DD2 /* MDCDamerauLevenshtein.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
+				MODULEMAP_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein.modulemap";
+				PRODUCT_MODULE_NAME = MDCDamerauLevenshtein;
+				PRODUCT_NAME = MDCDamerauLevenshtein;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		28E7E3FCB143CAA665C0820F975095A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3E19B0F4CE194E6B729CB32CE70CDD7 /* Pods-hallelujah.release.xcconfig */;
 			buildSettings = {
@@ -682,6 +719,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-hallelujah/Pods-hallelujah-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -700,7 +739,41 @@
 			};
 			name = Release;
 		};
-		44B60D00F8F02B4058F10BED4DD9F62D /* Release */ = {
+		5228B1530E362CC9C3CAA2439785A199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DD3DC4056614A0D12EBAD4BBB815221 /* GCDWebServer.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/GCDWebServer/GCDWebServer-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/GCDWebServer/GCDWebServer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
+				MODULEMAP_FILE = "Target Support Files/GCDWebServer/GCDWebServer.modulemap";
+				PRODUCT_MODULE_NAME = GCDWebServer;
+				PRODUCT_NAME = GCDWebServer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55CA95B50723561AB0E8756955D4AFB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09F8474E01A55C004EA9B2ED46A745D8 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
@@ -715,6 +788,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Pods-Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -732,66 +807,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		4DA2DB2AAB127664CBABF621195842D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DD3DC4056614A0D12EBAD4BBB815221 /* GCDWebServer.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GCDWebServer/GCDWebServer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GCDWebServer/GCDWebServer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
-				MODULEMAP_FILE = "Target Support Files/GCDWebServer/GCDWebServer.modulemap";
-				PRODUCT_MODULE_NAME = GCDWebServer;
-				PRODUCT_NAME = GCDWebServer;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		629369BAAC9BE0C3819DD462A57781F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D90FA2423B57C69650461B013FB8421C /* GCDWebServer.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GCDWebServer/GCDWebServer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GCDWebServer/GCDWebServer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
-				MODULEMAP_FILE = "Target Support Files/GCDWebServer/GCDWebServer.modulemap";
-				PRODUCT_MODULE_NAME = GCDWebServer;
-				PRODUCT_NAME = GCDWebServer;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		73E58C42638BD196F9CD1287F38A26F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -859,12 +874,11 @@
 			};
 			name = Debug;
 		};
-		9BC72FB50CB472111CD30B4B5796A43E /* Release */ = {
+		7E9B4E1491F4191FA7A50012A2CDAD40 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0C4081CDAEE8E6934390ABC4C1C3DD2 /* MDCDamerauLevenshtein.release.xcconfig */;
+			baseConfigurationReference = D90FA2423B57C69650461B013FB8421C /* GCDWebServer.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -874,54 +888,62 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-Info.plist";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/GCDWebServer/GCDWebServer-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/GCDWebServer/GCDWebServer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
-				MODULEMAP_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein.modulemap";
-				PRODUCT_MODULE_NAME = MDCDamerauLevenshtein;
-				PRODUCT_NAME = MDCDamerauLevenshtein;
+				MODULEMAP_FILE = "Target Support Files/GCDWebServer/GCDWebServer.modulemap";
+				PRODUCT_MODULE_NAME = GCDWebServer;
+				PRODUCT_NAME = GCDWebServer;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A9232CD4FF159F699D277E072A001264 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E536C3F996B3FA7C1C60F0562D2FDCE4 /* MDCDamerauLevenshtein.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
-				MODULEMAP_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein.modulemap";
-				PRODUCT_MODULE_NAME = MDCDamerauLevenshtein;
-				PRODUCT_NAME = MDCDamerauLevenshtein;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C39E781EF294F4B6DD767EC9A1B9A95E /* Debug */ = {
+		98F8D5F7F5274EADB6AB935B6ECC8987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80491E109F9560D9567F70176EEBC3D /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Pods-Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEB7B2F81B4619B9A2F6ABCD765CC2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 141A78816E50F7A0C5C32E4C2EB6F443 /* Pods-hallelujah.debug.xcconfig */;
 			buildSettings = {
@@ -936,6 +958,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-hallelujah/Pods-hallelujah-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -949,6 +973,41 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C308E2A96BB767B0E882D8C4A08C0BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E536C3F996B3FA7C1C60F0562D2FDCE4 /* MDCDamerauLevenshtein.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
+				MODULEMAP_FILE = "Target Support Files/MDCDamerauLevenshtein/MDCDamerauLevenshtein.modulemap";
+				PRODUCT_MODULE_NAME = MDCDamerauLevenshtein;
+				PRODUCT_NAME = MDCDamerauLevenshtein;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1016,65 +1075,14 @@
 			};
 			name = Release;
 		};
-		E400FE25127866C8592324F653CF7612 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B80491E109F9560D9567F70176EEBC3D /* Pods-Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Pods-Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = RECOMMENDED_MACOSX_DEPLOYMENT_TARGET;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1CF590D5824784D82CD99F90E5D66959 /* Build configuration list for PBXNativeTarget "GCDWebServer" */ = {
+		2CFCF9179CFACCF4A37B50E14EFFA6C3 /* Build configuration list for PBXNativeTarget "MDCDamerauLevenshtein" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				629369BAAC9BE0C3819DD462A57781F5 /* Debug */,
-				4DA2DB2AAB127664CBABF621195842D2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		31D91BDE1B57E5B8D0EE1F17C729D329 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E400FE25127866C8592324F653CF7612 /* Debug */,
-				44B60D00F8F02B4058F10BED4DD9F62D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B58636A2D5ECDFC72A5005B3B4B02DE /* Build configuration list for PBXNativeTarget "MDCDamerauLevenshtein" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9232CD4FF159F699D277E072A001264 /* Debug */,
-				9BC72FB50CB472111CD30B4B5796A43E /* Release */,
+				C308E2A96BB767B0E882D8C4A08C0BB6 /* Debug */,
+				02927638ECADBB5FA460E7B23633621C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1088,11 +1096,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68CC59684CFE3CCDEE7BAE8BEF96F1B6 /* Build configuration list for PBXNativeTarget "Pods-hallelujah" */ = {
+		77FB5845F3C869A8A24F694EFDB5251C /* Build configuration list for PBXNativeTarget "GCDWebServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C39E781EF294F4B6DD767EC9A1B9A95E /* Debug */,
-				42BD14212402ED4EB42CF906564B0FA9 /* Release */,
+				7E9B4E1491F4191FA7A50012A2CDAD40 /* Debug */,
+				5228B1530E362CC9C3CAA2439785A199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E47E322019FB5E35D023B26084F690D1 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98F8D5F7F5274EADB6AB935B6ECC8987 /* Debug */,
+				55CA95B50723561AB0E8756955D4AFB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEF1CF345260BFC1232FC7044701670F /* Build configuration list for PBXNativeTarget "Pods-hallelujah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB7B2F81B4619B9A2F6ABCD765CC2B1 /* Debug */,
+				28E7E3FCB143CAA665C0820F975095A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -3,7 +3,7 @@
 NSDictionary *deserializeJSON(NSString *path) {
     NSInputStream *inputStream = [[NSInputStream alloc] initWithFileAtPath:path];
     [inputStream open];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithStream:inputStream options:nil error:nil];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithStream:inputStream options:0 error:nil];
 
     [inputStream close];
     return dict;
@@ -203,8 +203,8 @@ marisa::Trie trie;
         if (result.count > 50) {
             result = [NSMutableArray arrayWithArray:[result subarrayWithRange:NSMakeRange(0, 49)]];
         }
+        // Remove user's original input from candidates completely
         [result removeObject:buffer];
-        [result insertObject:buffer atIndex:0];
     }
 
     NSMutableArray *result2 = [[NSMutableArray alloc] init];

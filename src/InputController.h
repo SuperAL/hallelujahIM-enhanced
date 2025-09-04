@@ -11,10 +11,15 @@
     NSInteger _currentCandidateIndex;
     NSMutableArray *_candidates;
     BOOL _defaultEnglishMode;
+    BOOL _hasNavigatedCandidates;
+    BOOL _candidatesExpanded;
     id _currentClient;
     NSUInteger _lastModifiers[2];
     NSEventType _lastEventTypes[2];
     AnnotationWinController *_annotationWin;
+
+    // Store current visible candidates for number key selection
+    NSArray *_currentVisibleCandidates;
 }
 
 - (NSMutableString *)composedBuffer;
@@ -22,5 +27,6 @@
 - (NSMutableString *)originalBuffer;
 - (void)originalBufferAppend:(NSString *)string client:(id)sender;
 - (void)setOriginalBuffer:(NSString *)string;
+- (void)commitOriginalInputWithoutSpace:(id)sender;
 
 @end

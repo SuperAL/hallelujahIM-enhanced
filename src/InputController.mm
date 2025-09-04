@@ -1,21 +1,46 @@
 #import <AppKit/NSSpellChecker.h>
 #import <CoreServices/CoreServices.h>
+#import <objc/runtime.h>
 
 #import "InputApplicationDelegate.h"
 #import "InputController.h"
 #import "NSScreen+PointConversion.h"
 
 extern IMKCandidates *sharedCandidates;
+extern IMKCandidates *expandedCandidates;
 extern NSUserDefaults *preference;
 extern ConversionEngine *engine;
 
 typedef NSInteger KeyCode;
-static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC = 53, KEY_ARROW_DOWN = 125, KEY_ARROW_UP = 126, KEY_RIGHT_SHIFT = 60;
+static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC = 53, KEY_ARROW_LEFT = 123, KEY_ARROW_RIGHT = 124, KEY_ARROW_UP = 126, KEY_ARROW_DOWN = 125, KEY_RIGHT_SHIFT = 60;
+
+// Debug logging function
+void writeDebugLog(NSString *message) {
+    NSString *logPath = @"/tmp/hallelujah_debug.log";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+    NSString *timestamp = [formatter stringFromDate:[NSDate date]];
+    NSString *logEntry = [NSString stringWithFormat:@"[%@] %@\n", timestamp, message];
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:logPath]) {
+        [@"=== Hallelujah IM Debug Log ===\n" writeToFile:logPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
+
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:logPath];
+    if (fileHandle) {
+        [fileHandle seekToEndOfFile];
+        [fileHandle writeData:[logEntry dataUsingEncoding:NSUTF8StringEncoding]];
+        [fileHandle closeFile];
+    }
+}
 
 @interface InputController()
 
 - (void)showIMEPreferences:(id)sender;
 - (void)clickAbout:(NSMenuItem *)sender;
+- (IMKCandidates *)currentCandidatePanel;
+- (void)switchToExpandedMode;
+- (void)switchToCompactMode;
 
 @end
 
@@ -97,7 +122,17 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
 
     if (keyCode == KEY_SPACE) {
         if (hasBufferedText) {
-            [self commitComposition:sender];
+            if (_candidates.count > 0) {
+                // Space key should apply the current selected candidate (default behavior)
+                NSString *selectedCandidate = _candidates[_currentCandidateIndex];
+                [self setComposedBuffer:selectedCandidate];
+                [self setOriginalBuffer:selectedCandidate];
+                [self commitComposition:sender];
+            } else {
+                // No candidates available, commit the original input with space
+                [self setComposedBuffer:[self originalBuffer]];
+                [self commitComposition:sender];
+            }
             return YES;
         }
         return NO;
@@ -105,7 +140,16 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
 
     if (keyCode == KEY_RETURN) {
         if (hasBufferedText) {
-            [self commitCompositionWithoutSpace:sender];
+            if (_hasNavigatedCandidates && _candidates.count > 0) {
+                // User has navigated through candidates, commit the selected candidate
+                NSString *selectedCandidate = _candidates[_currentCandidateIndex];
+                [self setComposedBuffer:selectedCandidate];
+                [self setOriginalBuffer:selectedCandidate];
+                [self commitCompositionWithoutSpace:sender];
+            } else {
+                // User hasn't navigated, commit the original input
+                [self commitOriginalInputWithoutSpace:sender];
+            }
             return YES;
         }
         return NO;
@@ -120,6 +164,9 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
 
     char ch = [characters characterAtIndex:0];
     if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+        // Reset navigation state whenever user modifies the original input
+        _hasNavigatedCandidates = NO;
+
         [self originalBufferAppend:characters client:sender];
 
         [sharedCandidates updateCandidates];
@@ -128,18 +175,195 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
     }
 
     if ([self isMojaveAndLaterSystem]) {
-        BOOL isCandidatesVisible = [sharedCandidates isVisible];
+        BOOL isCandidatesVisible = [sharedCandidates isVisible] || [expandedCandidates isVisible];
+        writeDebugLog([NSString stringWithFormat:@"Key pressed: %d, candidates visible: %@", keyCode, isCandidatesVisible ? @"YES" : @"NO"]);
         if (isCandidatesVisible) {
-            if (keyCode == KEY_ARROW_DOWN) {
-                [sharedCandidates moveDown:self];
-                _currentCandidateIndex++;
+            IMKCandidates *currentPanel = [self currentCandidatePanel];
+
+            // Up/Down keys: expand/collapse or navigate in expanded mode
+            if (keyCode == KEY_ARROW_UP || keyCode == KEY_ARROW_DOWN) {
+                if (!_candidatesExpanded) {
+                    // Expand to grid mode when up/down is pressed
+                    writeDebugLog(@"🔄 Expanding candidates panel on first up/down key press");
+                    [self switchToExpandedMode];
+                    _hasNavigatedCandidates = YES;
+
+                    // After expanding, also perform the navigation in the same key press
+                    IMKCandidates *currentPanel = [self currentCandidatePanel];
+                    if (keyCode == KEY_ARROW_UP) {
+                        writeDebugLog(@"⬆️ Moving up after expansion");
+                        [currentPanel moveUp:self];
+                    } else {
+                        writeDebugLog(@"⬇️ Moving down after expansion");
+                        [currentPanel moveDown:self];
+                    }
+                    return YES; // We handled the event completely
+                } else {
+                    // Navigate up/down in expanded mode - let IMK handle it
+                    if (keyCode == KEY_ARROW_UP) {
+                        writeDebugLog([NSString stringWithFormat:@"Arrow UP pressed in expanded mode, current index: %ld", (long)_currentCandidateIndex]);
+                        [currentPanel moveUp:self];
+                    } else {
+                        writeDebugLog([NSString stringWithFormat:@"Arrow DOWN pressed in expanded mode, current index: %ld", (long)_currentCandidateIndex]);
+                        [currentPanel moveDown:self];
+                    }
+                    _hasNavigatedCandidates = YES;
+                    return YES; // We handled the event completely
+                }
+            }
+
+            // Left/Right keys: navigate horizontally
+            if (keyCode == KEY_ARROW_RIGHT) {
+                if (_candidatesExpanded) {
+                    writeDebugLog([NSString stringWithFormat:@"Arrow RIGHT pressed in expanded mode, current index: %ld", (long)_currentCandidateIndex]);
+                    [currentPanel moveRight:self];
+                } else {
+                    [currentPanel moveDown:self];
+                    _currentCandidateIndex++;
+                }
+                _hasNavigatedCandidates = YES;
                 return NO;
             }
 
-            if (keyCode == KEY_ARROW_UP) {
-                [sharedCandidates moveUp:self];
-                _currentCandidateIndex--;
+            if (keyCode == KEY_ARROW_LEFT) {
+                if (_candidatesExpanded) {
+                    writeDebugLog([NSString stringWithFormat:@"Arrow LEFT pressed in expanded mode, current index: %ld", (long)_currentCandidateIndex]);
+                    [currentPanel moveLeft:self];
+                } else {
+                    [currentPanel moveUp:self];
+                    _currentCandidateIndex--;
+                }
+                _hasNavigatedCandidates = YES;
                 return NO;
+            }
+
+            // Handle number keys for candidate selection
+            if ([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:ch]) {
+                int pressedNumber = characters.intValue;
+
+                // Clear log section
+                writeDebugLog(@"");
+                writeDebugLog(@"========== NUMBER KEY DEBUG ==========");
+                writeDebugLog([NSString stringWithFormat:@"🔢 Number key pressed: %d", pressedNumber]);
+                writeDebugLog([NSString stringWithFormat:@"📋 Candidates visible: %@", isCandidatesVisible ? @"YES" : @"NO"]);
+                writeDebugLog([NSString stringWithFormat:@"🔍 Candidates expanded: %@", _candidatesExpanded ? @"YES" : @"NO"]);
+                writeDebugLog([NSString stringWithFormat:@"📍 Current candidate index: %ld", (long)_currentCandidateIndex]);
+                writeDebugLog([NSString stringWithFormat:@"📊 Total candidates: %lu", (unsigned long)_candidates.count]);
+                writeDebugLog([NSString stringWithFormat:@"🧭 Has navigated: %@", _hasNavigatedCandidates ? @"YES" : @"NO"]);
+
+                // Show current candidates list
+                if (_candidates.count > 0) {
+                    writeDebugLog(@"📝 Current candidates:");
+                    for (int i = 0; i < MIN(_candidates.count, 10); i++) {
+                        NSString *marker = (i == _currentCandidateIndex) ? @"👉" : @"  ";
+                        writeDebugLog([NSString stringWithFormat:@"  %@[%d] %@", marker, i, _candidates[i]]);
+                    }
+                }
+
+                if (pressedNumber >= 1 && pressedNumber <= 9) {
+                    writeDebugLog([NSString stringWithFormat:@"✅ Valid number key %d pressed", pressedNumber]);
+
+                    if (_candidatesExpanded) {
+                        writeDebugLog(@"🔍 EXPANDED MODE - Processing selection...");
+
+                        // Try different approaches to select candidates in expanded mode
+                        IMKCandidates *currentPanel = [self currentCandidatePanel];
+                        writeDebugLog([NSString stringWithFormat:@"📱 Current panel: %@", currentPanel]);
+
+                        // Method 1: Use visible candidates for accurate selection
+                        if (_currentVisibleCandidates && pressedNumber <= _currentVisibleCandidates.count) {
+                            int visibleIndex = pressedNumber - 1;
+                            NSString *targetCandidate = _currentVisibleCandidates[visibleIndex];
+                            writeDebugLog([NSString stringWithFormat:@"🎯 Method 1: Visible candidate selection - number: %d, target: '%@'", pressedNumber, targetCandidate]);
+
+                            // Try to simulate candidate selection
+                            NSAttributedString *candidateString = [[NSAttributedString alloc] initWithString:targetCandidate];
+                            writeDebugLog(@"📤 Calling candidateSelected with visible candidate...");
+                            [self candidateSelected:candidateString];
+                            writeDebugLog(@"✅ candidateSelected completed with visible candidate");
+                            return YES;
+                        } else {
+                            writeDebugLog([NSString stringWithFormat:@"❌ Number %d exceeds visible candidates count %lu or no visible candidates stored",
+                                         pressedNumber, (unsigned long)(_currentVisibleCandidates ? _currentVisibleCandidates.count : 0)]);
+                        }
+
+                        // Method 2: Try IMK selectCandidateWithIdentifier as fallback
+                        int imkTargetIndex = pressedNumber - 1;
+                        writeDebugLog([NSString stringWithFormat:@"🔄 Method 2: IMK selectCandidateWithIdentifier(%d)", imkTargetIndex]);
+
+                        if ([currentPanel respondsToSelector:@selector(selectCandidateWithIdentifier:)]) {
+                            writeDebugLog(@"✅ IMK method available, calling...");
+                            [currentPanel selectCandidateWithIdentifier:imkTargetIndex];
+                            writeDebugLog(@"📤 IMK method called");
+                        } else {
+                            writeDebugLog(@"❌ IMK selectCandidateWithIdentifier not available");
+                        }
+
+                        // Method 3: Direct candidate selection fallback (old logic)
+                        int targetIndex = pressedNumber - 1;
+                        writeDebugLog([NSString stringWithFormat:@"🔄 Method 3: Direct selection fallback - target index: %d", targetIndex]);
+
+                        if (targetIndex >= 0 && targetIndex < _candidates.count) {
+                            NSString *targetCandidate = _candidates[targetIndex];
+                            writeDebugLog([NSString stringWithFormat:@"🎯 Fallback target candidate: [%d] '%@'", targetIndex, targetCandidate]);
+
+                            // Try to simulate candidate selection
+                            NSAttributedString *candidateString = [[NSAttributedString alloc] initWithString:targetCandidate];
+                            writeDebugLog(@"📤 Calling candidateSelected (fallback)...");
+                            [self candidateSelected:candidateString];
+                            writeDebugLog(@"✅ candidateSelected completed (fallback)");
+                            return YES;
+                        } else {
+                            writeDebugLog([NSString stringWithFormat:@"❌ Fallback target index %d out of bounds (total: %lu)", targetIndex, (unsigned long)_candidates.count]);
+                        }
+
+                        if (targetIndex < _candidates.count) {
+                            NSString *candidate = _candidates[targetIndex];
+                            writeDebugLog([NSString stringWithFormat:@"Selected candidate in expanded mode: %@", candidate]);
+
+                            [self cancelComposition];
+                            [self setComposedBuffer:candidate];
+                            [self setOriginalBuffer:candidate];
+                            [self commitComposition:sender];
+                            return YES;
+                        } else {
+                            writeDebugLog([NSString stringWithFormat:@"Target index %d out of bounds (total: %ld)", targetIndex, (long)_candidates.count]);
+                        }
+                        return YES; // Consume the key even if not handled
+                    } else {
+                        // In compact mode, handle number keys manually
+                        writeDebugLog([NSString stringWithFormat:@"=== COMPACT MODE DEBUG ==="]);
+                        writeDebugLog([NSString stringWithFormat:@"Current candidate index: %ld", (long)_currentCandidateIndex]);
+
+                        NSString *candidate = nil;
+                        int pageSize = 9;
+                        if (_currentCandidateIndex <= pageSize) {
+                            if (pressedNumber <= _candidates.count) {
+                                candidate = _candidates[pressedNumber - 1];
+                                writeDebugLog([NSString stringWithFormat:@"Simple selection: candidate[%d] = %@", pressedNumber - 1, candidate]);
+                            }
+                        } else {
+                            int calculatedIndex = pageSize * (_currentCandidateIndex / pageSize - 1) + (_currentCandidateIndex % pageSize) + pressedNumber - 1;
+                            writeDebugLog([NSString stringWithFormat:@"Calculated index: %d", calculatedIndex]);
+                            if (calculatedIndex < _candidates.count) {
+                                candidate = _candidates[calculatedIndex];
+                                writeDebugLog([NSString stringWithFormat:@"Complex selection: candidate[%d] = %@", calculatedIndex, candidate]);
+                            }
+                        }
+
+                        if (candidate) {
+                            writeDebugLog([NSString stringWithFormat:@"Selected candidate: %@", candidate]);
+                            [self cancelComposition];
+                            [self setComposedBuffer:candidate];
+                            [self setOriginalBuffer:candidate];
+                            [self commitComposition:sender];
+                            return YES;
+                        } else {
+                            writeDebugLog(@"No candidate found");
+                        }
+                    }
+                }
+                return YES; // Consume the number key even if not handled
             }
         }
 
@@ -147,23 +371,6 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
             if (!hasBufferedText) {
                 [self appendToComposedBuffer:characters];
                 [self commitCompositionWithoutSpace:sender];
-                return YES;
-            }
-
-            if (isCandidatesVisible) { // use 1~9 digital numbers as selection keys
-                int pressedNumber = characters.intValue;
-                NSString *candidate;
-                int pageSize = 9;
-                if (_currentCandidateIndex <= pageSize) {
-                    candidate = _candidates[pressedNumber - 1];
-                } else {
-                    candidate = _candidates[pageSize * (_currentCandidateIndex / pageSize - 1) + (_currentCandidateIndex % pageSize) +
-                                            pressedNumber - 1];
-                }
-                [self cancelComposition];
-                [self setComposedBuffer:candidate];
-                [self setOriginalBuffer:candidate];
-                [self commitComposition:sender];
                 return YES;
             }
         }
@@ -190,6 +397,9 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
 
     if (_insertionIndex > 0) {
         --_insertionIndex;
+
+        // Reset navigation state when user modifies the original input
+        _hasNavigatedCandidates = NO;
 
         NSString *convertedString = [originalText substringToIndex:originalText.length - 1];
 
@@ -242,15 +452,32 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
     [self reset];
 }
 
+- (void)commitOriginalInputWithoutSpace:(id)sender {
+    NSString *text = [self originalBuffer];
+
+    if (text == nil || text.length == 0) {
+        return;
+    }
+
+    [sender insertText:text replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
+
+    [self reset];
+}
+
 - (void)reset {
     [self setComposedBuffer:@""];
     [self setOriginalBuffer:@""];
     _insertionIndex = 0;
-    _currentCandidateIndex = 1;
+    _currentCandidateIndex = 0;
+    _hasNavigatedCandidates = NO;
+    _candidatesExpanded = NO;
     [sharedCandidates clearSelection];
     [sharedCandidates hide];
+    [expandedCandidates clearSelection];
+    [expandedCandidates hide];
     _candidates = [[NSMutableArray alloc] init];
     [sharedCandidates setCandidateData:@[]];
+    [expandedCandidates setCandidateData:@[]];
     [_annotationWin setAnnotation:@""];
     [_annotationWin hideWindow];
 }
@@ -317,11 +544,50 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
 }
 
 - (void)candidateSelectionChanged:(NSAttributedString *)candidateString {
-    [self _updateComposedBuffer:candidateString];
+    writeDebugLog(@"");
+    writeDebugLog(@"========== CANDIDATE SELECTION CHANGED ==========");
 
-    [self showPreeditString:candidateString.string];
+    // Update the current candidate index based on the selected candidate
+    if (_candidates && candidateString) {
+        NSString *selectedCandidate = candidateString.string;
+        writeDebugLog([NSString stringWithFormat:@"🔄 candidateSelectionChanged called with: '%@'", selectedCandidate]);
+        writeDebugLog([NSString stringWithFormat:@"📍 Previous index: %ld", (long)_currentCandidateIndex]);
+        writeDebugLog([NSString stringWithFormat:@"🔍 Candidates expanded: %@", _candidatesExpanded ? @"YES" : @"NO"]);
 
-    _insertionIndex = candidateString.length;
+        NSInteger oldIndex = _currentCandidateIndex;
+        for (NSInteger i = 0; i < _candidates.count; i++) {
+            if ([_candidates[i] isEqualToString:selectedCandidate]) {
+                _currentCandidateIndex = i;
+                writeDebugLog([NSString stringWithFormat:@"📍 New index: %ld (changed from %ld)", (long)_currentCandidateIndex, (long)oldIndex]);
+                writeDebugLog([NSString stringWithFormat:@"🎯 Selected candidate: [%ld] '%@'", (long)i, selectedCandidate]);
+
+                // Try to get more information from IMK framework
+                if (_candidatesExpanded) {
+                    // Delay the introspection to let IMK update its internal state
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self logIMKPanelInfo];
+                    });
+                }
+                break;
+            }
+        }
+
+        // Show current candidates context
+        writeDebugLog(@"📝 Current candidates context:");
+        int start = MAX(0, (int)_currentCandidateIndex - 2);
+        int end = MIN((int)_candidates.count, (int)_currentCandidateIndex + 3);
+        for (int i = start; i < end; i++) {
+            NSString *marker = (i == _currentCandidateIndex) ? @"👉" : @"  ";
+            writeDebugLog([NSString stringWithFormat:@"  %@[%d] %@", marker, i, _candidates[i]]);
+        }
+    }
+    writeDebugLog(@"===============================================");
+
+    // Don't update the composed buffer or display text when just navigating candidates
+    // Keep showing the user's original input
+    [self showPreeditString:[self originalBuffer]];
+
+    _insertionIndex = [self originalBuffer].length;
 
     BOOL showTranslation = [preference boolForKey:@"showTranslation"];
     if (showTranslation) {
@@ -330,9 +596,126 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
 }
 
 - (void)candidateSelected:(NSAttributedString *)candidateString {
-    [self _updateComposedBuffer:candidateString];
+    writeDebugLog(@"");
+    writeDebugLog(@"========== CANDIDATE SELECTED ==========");
+    writeDebugLog([NSString stringWithFormat:@"🎯 candidateSelected called with: '%@'", candidateString.string]);
+    writeDebugLog([NSString stringWithFormat:@"📍 Current candidate index: %ld", (long)_currentCandidateIndex]);
+    writeDebugLog([NSString stringWithFormat:@"🔍 Candidates expanded: %@", _candidatesExpanded ? @"YES" : @"NO"]);
+    writeDebugLog([NSString stringWithFormat:@"📊 Total candidates: %lu", (unsigned long)_candidates.count]);
 
+    // Update both buffers when user explicitly selects a candidate
+    [self setComposedBuffer:candidateString.string];
+    [self setOriginalBuffer:candidateString.string];
+
+    writeDebugLog([NSString stringWithFormat:@"📝 Set composed buffer to: '%@'", candidateString.string]);
+    writeDebugLog(@"📤 Committing composition...");
     [self commitComposition:_currentClient];
+    writeDebugLog(@"✅ Composition committed");
+    writeDebugLog(@"=====================================");
+}
+
+- (void)logIMKPanelInfo {
+    IMKCandidates *currentPanel = [self currentCandidatePanel];
+    if (!currentPanel) {
+        writeDebugLog(@"❌ No current panel available");
+        return;
+    }
+
+    writeDebugLog(@"");
+    writeDebugLog(@"========== DELAYED IMK PANEL INFO ==========");
+
+    // Try to get candidate frame and other info
+    NSRect candidateFrame = [currentPanel candidateFrame];
+    writeDebugLog([NSString stringWithFormat:@"📐 Candidate frame: x=%.1f, y=%.1f, w=%.1f, h=%.1f",
+                 candidateFrame.origin.x, candidateFrame.origin.y, candidateFrame.size.width, candidateFrame.size.height]);
+
+    // Try to introspect the panel object for more methods
+    writeDebugLog([NSString stringWithFormat:@"🔍 Panel class: %@", [currentPanel class]]);
+
+    // Try some common methods that might exist
+    if ([currentPanel respondsToSelector:@selector(selectedCandidateIndex)]) {
+        id result = [currentPanel performSelector:@selector(selectedCandidateIndex)];
+        NSInteger selectedIndex = [result integerValue];
+        writeDebugLog([NSString stringWithFormat:@"📊 IMK selectedCandidateIndex: %ld", (long)selectedIndex]);
+    }
+
+    if ([currentPanel respondsToSelector:@selector(visibleCandidates)]) {
+        id visibleCandidates = [currentPanel performSelector:@selector(visibleCandidates)];
+        writeDebugLog([NSString stringWithFormat:@"👁️ IMK visibleCandidates (DELAYED): %@", visibleCandidates]);
+
+        // Try to parse the visible candidates to understand the layout
+        if ([visibleCandidates isKindOfClass:[NSArray class]]) {
+            NSArray *visibleArray = (NSArray *)visibleCandidates;
+            writeDebugLog([NSString stringWithFormat:@"📊 Visible candidates count: %lu", (unsigned long)visibleArray.count]);
+
+            // Store the current visible candidates for number key selection
+            _currentVisibleCandidates = visibleArray;
+
+            // Extract candidate strings from the visible candidates
+            NSMutableArray *visibleCandidateStrings = [NSMutableArray array];
+            for (int i = 0; i < visibleArray.count; i++) {
+                id candidate = visibleArray[i];
+                writeDebugLog([NSString stringWithFormat:@"  👁️[%d] %@", i, candidate]);
+
+                // Try to extract the candidate string from the IMK candidate object
+                NSString *candidateString = nil;
+                if ([candidate respondsToSelector:@selector(string)]) {
+                    candidateString = [candidate performSelector:@selector(string)];
+                } else if ([candidate isKindOfClass:[NSString class]]) {
+                    candidateString = (NSString *)candidate;
+                } else {
+                    // Try to parse from description like "'(null)' -> 'helps' (IMKCandidateTypeReplacement)"
+                    NSString *description = [candidate description];
+                    NSRange arrowRange = [description rangeOfString:@"' -> '"];
+                    if (arrowRange.location != NSNotFound) {
+                        NSRange startRange = NSMakeRange(arrowRange.location + arrowRange.length, description.length - arrowRange.location - arrowRange.length);
+                        NSRange endRange = [description rangeOfString:@"'" options:0 range:startRange];
+                        if (endRange.location != NSNotFound) {
+                            candidateString = [description substringWithRange:NSMakeRange(startRange.location, endRange.location - startRange.location)];
+                        }
+                    }
+                }
+
+                if (candidateString) {
+                    [visibleCandidateStrings addObject:candidateString];
+                    writeDebugLog([NSString stringWithFormat:@"    📝 Extracted: '%@'", candidateString]);
+                } else {
+                    writeDebugLog([NSString stringWithFormat:@"    ❌ Could not extract string from: %@", candidate]);
+                }
+            }
+
+            // Store the extracted strings
+            _currentVisibleCandidates = [visibleCandidateStrings copy];
+            writeDebugLog([NSString stringWithFormat:@"💾 Stored %lu visible candidate strings for number key selection", (unsigned long)visibleCandidateStrings.count]);
+        }
+    }
+
+    if ([currentPanel respondsToSelector:@selector(candidatesPerRow)]) {
+        id result = [currentPanel performSelector:@selector(candidatesPerRow)];
+        NSInteger candidatesPerRow = [result integerValue];
+        writeDebugLog([NSString stringWithFormat:@"📏 IMK candidatesPerRow: %ld", (long)candidatesPerRow]);
+    }
+
+    // List all methods available on the panel (only once to avoid spam)
+    static BOOL methodsLogged = NO;
+    if (!methodsLogged) {
+        unsigned int methodCount;
+        Method *methods = class_copyMethodList([currentPanel class], &methodCount);
+        writeDebugLog(@"🔧 Available methods:");
+        for (unsigned int i = 0; i < MIN(methodCount, 30); i++) {
+            SEL selector = method_getName(methods[i]);
+            NSString *methodName = NSStringFromSelector(selector);
+            if ([methodName containsString:@"candidate"] || [methodName containsString:@"select"] ||
+                [methodName containsString:@"visible"] || [methodName containsString:@"row"] ||
+                [methodName containsString:@"page"] || [methodName containsString:@"index"]) {
+                writeDebugLog([NSString stringWithFormat:@"  - %@", methodName]);
+            }
+        }
+        free(methods);
+        methodsLogged = YES;
+    }
+
+    writeDebugLog(@"==========================================");
 }
 
 - (void)_updateComposedBuffer:(NSAttributedString *)candidateString {
@@ -346,7 +729,9 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
         _annotationWin = [AnnotationWinController sharedController];
     }
 
-    _currentCandidateIndex = 1;
+    _currentCandidateIndex = 0;
+    _hasNavigatedCandidates = NO;
+    _candidatesExpanded = NO;
     _candidates = [[NSMutableArray alloc] init];
 }
 
@@ -430,6 +815,30 @@ static const KeyCode KEY_RETURN = 36, KEY_SPACE = 49, KEY_DELETE = 51, KEY_ESC =
     }
 
     return positionPoint;
+}
+
+- (IMKCandidates *)currentCandidatePanel {
+    return _candidatesExpanded ? expandedCandidates : sharedCandidates;
+}
+
+- (void)switchToExpandedMode {
+    if (!_candidatesExpanded) {
+        _candidatesExpanded = YES;
+        [sharedCandidates hide];
+        [expandedCandidates setCandidateData:_candidates];
+        [expandedCandidates show:kIMKLocateCandidatesBelowHint];
+        [expandedCandidates selectCandidateWithIdentifier:_currentCandidateIndex];
+    }
+}
+
+- (void)switchToCompactMode {
+    if (_candidatesExpanded) {
+        _candidatesExpanded = NO;
+        [expandedCandidates hide];
+        [sharedCandidates setCandidateData:_candidates];
+        [sharedCandidates show:kIMKLocateCandidatesBelowHint];
+        [sharedCandidates selectCandidateWithIdentifier:_currentCandidateIndex];
+    }
 }
 
 @end
